@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Blogzine - Blog and Magazine Bootstrap 5 Theme</title>
     <meta charset="utf-8">
@@ -19,10 +18,20 @@
     <link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
-
 <body>
+<script>
+    var myModal = document.getElementById('myModal')
+    var myInput = document.getElementById('myInput')
 
+    myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+    })
 
+    var myModalEl = document.getElementById('myModal')
+    myModalEl.addEventListener('hidden.bs.modal', function (event) {
+        // do something...
+    })
+</script>
 <header class="navbar-light navbar-sticky header-static">
     <!-- Logo Nav START -->
     <nav class="navbar navbar-expand-lg">
@@ -37,14 +46,21 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav navbar-nav-scroll mx-auto">
                     <li class="nav-item ">
-                        <a class="nav-link active" href="#" id="homeMenu"
+                        <a class="nav-link active" href="index.html" id="homeMenu"
                            aria-haspopup="true" aria-expanded="false">
                             Главная
                         </a>
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link " href="author.html" id="pagesExperts" aria-haspopup="true"
+                        <a class="nav-link" href="author.html" id="pagesPartypent" aria-haspopup="true"
+                           aria-expanded="false">
+                            Участники
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="experts.html" id="pagesExperts" aria-haspopup="true"
                            aria-expanded="false">
                             Эксперты
                         </a>
@@ -67,15 +83,11 @@
                     </div>
                 </div>
             </div>
-
-        </div>
-        </div>
         </div>
     </nav>
 </header>
 
 <main>
-
 
     <section class="pt-3 pb-3 mb-2 card-grid">
         <div class="container">
@@ -149,514 +161,637 @@
         </div>
     </section>
 
-    <!--    <p>-->
-    <!--        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">-->
-    <!--            Link with href-->
-    <!--        </a>-->
-    <!--        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">-->
-    <!--            Button with data-bs-target-->
-    <!--        </button>-->
-    <!--    </p>-->
-    <!--    <div class="collapse" id="collapseExample">-->
-    <!--        <div class="card card-body">-->
-    <!--            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.-->
-    <!--        </div>-->
-    <!--    </div>-->
-
     <section class="p-0">
         <div class="container">
             <div class="row g-4">
+                <h2 class="mt-5">Работы наших участников</h2>
 
                 <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-img-scale overflow-hidden" type="button"
-                         data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
-                         aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_1593.JPG">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
-
-                                    </a>
-                                </h4>
-                                <!-- Card info -->
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link">
-                                            <a href="#" class="stretched-link text-reset btn-link">
-                                                Автор: Турсунов Валиджон
-                                            </a>
-                                        </div>
-                                    </li>
-
-                                </ul>
+                    <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                         style="border: none;">
+                        <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                            <!-- Card Image -->
+                            <img src="assets/images/works/IMG_1593.JPG" style="min-height: 100%;">
+                            <!-- Card Image overlay -->
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link">
+                                                <a href="#" class="stretched-link text-reset btn-link">
+                                                    Автор: Шукруллаева Шабрез
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample">
-                    <div class="card card-body">
-                        <b>Люди ждут подходящего момента</b>
-                        Человек перед другими, надевая маску справедливости, отказывается совершить коррупцию, но если он находится один в помещении и никто не видит его, он с удовольствием совершает это грязное дело.
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
+                                <b>Люди ждут подходящего момента</b>
+                                Человек перед другими, надевая маску справедливости, отказывается совершить коррупцию,
+                                но если он находится один в помещении и никто не видит его, он с удовольствием совершает
+                                это грязное дело.
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
 
+
                 <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-image-scale" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_1594.JPG" alt="">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
+                    <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                        <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                             style="border: none;">
 
-                                    </a>
-                                </h4>
-                                <!-- Card info -->
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link">
+                            <img src="assets/images/works/IMG_1594.JPG" style="min-height: 100%;" alt="">
+                            <!-- Card Image overlay -->
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link">
 
-                                            <a href="#" class="stretched-link text-reset btn-link">
-                                                Автор: Шукруллаева Шабрез
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
+                                                <a href="#" class="stretched-link text-reset btn-link">
+                                                    Автор: Шукруллаева Шабрез
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample2">
-                    <div class="card card-body">
-                        <b>Домашнее наслие</b>
-                        Если смотреть на статус Кво, то одной из серьезных проблем общества является домашнее насилие и оно в Центральной Азии особо распространена.
-                        Женщина, которая подвергалась домашнему насилию, перед обществом всегда наносит гримас,как буд то у нее все хорошо. Но, несмотря на это она надеется и верит в яркое и светлое будущее (свет в глазах и солнце). Дети тоже становятся свидетелями и жертвами происходящего в семье, поэтому во сне видет разных героев из мультфильмов. Для ребенка же это целое детство. Цепь и птички описывают зависимость и свободу, в данном случаи речь идёт о жертве насилия.
-
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
+                                <b>Домашнее наслие</b>
+                                Если смотреть на статус Кво, то одной из серьезных проблем общества является домашнее
+                                насилие и оно в Центральной Азии особо распространена.
+                                Женщина, которая подвергалась домашнему насилию, перед обществом всегда наносит
+                                гримас,как буд то у нее все хорошо. Но, несмотря на это она надеется и верит в яркое и
+                                светлое будущее (свет в глазах и солнце). Дети тоже становятся свидетелями и жертвами
+                                происходящего в семье, поэтому во сне видет разных героев из мультфильмов. Для ребенка
+                                же это целое детство. Цепь и птички описывают зависимость и свободу, в данном случаи
+                                речь идёт о жертве насилия.
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
 
+
                 <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-image-scale" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_1595.JPG" alt="">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
-                                    </a>
-                                </h4>
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link">
-                                            <a href="#" class="stretched-link text-reset btn-link">
-                                                Автор: Тимур Шарипов
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
+                    <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                        <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal3"
+                             style="border: none;">
+
+                            <img src="assets/images/works/IMG_1595.JPG" style="min-height: 100%;" alt="">
+                            <!-- Card Image overlay -->
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link">
+                                                <a href="#" class="stretched-link text-reset btn-link">
+                                                    Автор: Тимур Шарипов
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample3">
-                    <div class="card card-body">
-                        <b>Браконьерство в центральной Азии</b> и массовое истребление редких животных является большой проблемой по сей день. Легальная международная торговля животными в год составляет более 317 000 живых птиц, более 2 млн. рептилий, 2,5 млн. крокодильих шкур, 1,5 млн. шкур ящериц, 2,1 млн. шкур змей, 73 тонны икры, около 20 000 охотничьих трофеев. Нелегальная торговля - по данным Интерпола, 6-9 миллиардов
-                        долларов в год. Это угрожает 30 тысячам видов животных по всему миру. Всего осталось около 6000 особей снежныйх барсов на всей планете. Человечество наступает, уничтожает этих животных. Их используют для украшений и трофея. Но никто не понимает, насколько это грозит человечеству. А жестокости человека нет предела, поэтому хочется призвать всех - остановить эту бесконечную цепь насилия и истребления над живыми существами 🥺❤️
+                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
+                                <b>Браконьерство в центральной Азии</b> и массовое истребление редких животных является
+                                большой проблемой по сей день. Легальная международная торговля животными в год
+                                составляет более 317 000 живых птиц, более 2 млн. рептилий, 2,5 млн. крокодильих шкур,
+                                1,5 млн. шкур ящериц, 2,1 млн. шкур змей, 73 тонны икры, около 20 000 охотничьих
+                                трофеев. Нелегальная торговля - по данным Интерпола, 6-9 миллиардов
+                                долларов в год. Это угрожает 30 тысячам видов животных по всему миру. Всего осталось
+                                около 6000 особей снежныйх барсов на всей планете. Человечество наступает, уничтожает
+                                этих животных. Их используют для украшений и трофея. Но никто не понимает, насколько это
+                                грозит человечеству. А жестокости человека нет предела, поэтому хочется призвать всех -
+                                остановить эту бесконечную цепь насилия и истребления над живыми существами 🥺❤️
+
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-image-scale" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_8122.PNG" alt="">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
 
-                                    </a>
-                                </h4>
-                                <!-- Card info -->
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link">Автор: <a href="author.html/"
-                                                                        class="stretched-link text-reset btn-link">
-                                            Тимур Шарипов</a>
-                                        </div>
-                                    </li>
-                                </ul>
+                <div class="col-sm-6 col-lg-4">
+                    <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal4"
+                         style="border: none;">
+                        <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                            <img src="assets/images/works/IMG_8122.PNG" style="min-height: 35rem;" alt="">
+                            <!-- Card Image overlay -->
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link">Автор:
+                                                <a href="author.html/" class="stretched-link text-reset btn-link">Тимур
+                                                    Шарипов</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample4">
-                    <div class="card card-body">
-                       <b> «Островок жизни»</b>
-                        Народ в виде маленького городка окружён тёмными мрачными высотками. Городок светится, там люди
-                        живут, дома старенькие, много зелени, дети играют, кто-то вешает бельё. Этим хочется показать
-                        то, что люди – это часть государства, а не высотки. Что вот этот маленький островок и есть тот
-                        самый центральный объект, ради чего государство должно существовать. Этот островок и есть
-                        решения – которые ДОЛЖНЫ приниматься, а не идти из тёмных мрачных высоток.
-                        Цвета вокруг мрачные, пасмурные, тёмно-синие. А городок светлый, тёплый и светящийся. На вкус
-                        этот островок как тёплые венские вафли с клубничной начинкой, политый сгущённым молоком. А мрак
-                        вокруг городка, как горькие орехи (не люблю орехи). Которые покрылись изнутри гнилью, где сидит
-                        огромная гусеница пожирая всё. Хотя снаружи кажутся крепкими и прочными… Пахнет городок очень
-                        приятно, как свежее лавандовое мыло. Таким мылом и кондиционером люди стирают бельё, которое
-                        висит на балконах и улицах людей. Всё душистое свежее чистое и такое искреннее. Очень кажется
-                        родным и домашним. Этот островок звучит как спокойная indie или country музыка. Потому что
-                        никуда не спешит и не торопится. А мрачные высотки словно наблюдают за ним, и ощущение будто они
-                        медленно перемещаются. Звучит как ледокол, от которого исходит глухой звук «Гууум» и шарахается
-                        ударяясь металлическим корпусом. Так и эти здания скользят по земле. Направление: антиутопия,
-                        художественный цифровой стиль маслянной краски. Нарисована иллюстрация на перьевом дисплее в
-                        цифровом формате. Структура: передний план ярких насыщенных цветов и задний план в мрачных
-                        приглушённых тонах.
+                <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
+                                <b> «Островок жизни»</b>
+                                Народ в виде маленького городка окружён тёмными мрачными высотками. Городок светится,
+                                там люди
+                                живут, дома старенькие, много зелени, дети играют, кто-то вешает бельё. Этим хочется
+                                показать
+                                то, что люди – это часть государства, а не высотки. Что вот этот маленький островок и
+                                есть тот
+                                самый центральный объект, ради чего государство должно существовать. Этот островок и
+                                есть
+                                решения – которые ДОЛЖНЫ приниматься, а не идти из тёмных мрачных высоток.
+                                Цвета вокруг мрачные, пасмурные, тёмно-синие. А городок светлый, тёплый и светящийся. На
+                                вкус
+                                этот островок как тёплые венские вафли с клубничной начинкой, политый сгущённым молоком.
+                                А мрак
+                                вокруг городка, как горькие орехи (не люблю орехи). Которые покрылись изнутри гнилью,
+                                где сидит
+                                огромная гусеница пожирая всё. Хотя снаружи кажутся крепкими и прочными… Пахнет городок
+                                очень
+                                приятно, как свежее лавандовое мыло. Таким мылом и кондиционером люди стирают бельё,
+                                которое
+                                висит на балконах и улицах людей. Всё душистое свежее чистое и такое искреннее. Очень
+                                кажется
+                                родным и домашним. Этот островок звучит как спокойная indie или country музыка. Потому
+                                что
+                                никуда не спешит и не торопится. А мрачные высотки словно наблюдают за ним, и ощущение
+                                будто они
+                                медленно перемещаются. Звучит как ледокол, от которого исходит глухой звук «Гууум» и
+                                шарахается
+                                ударяясь металлическим корпусом. Так и эти здания скользят по земле. Направление:
+                                антиутопия,
+                                художественный цифровой стиль маслянной краски. Нарисована иллюстрация на перьевом
+                                дисплее в
+                                цифровом формате. Структура: передний план ярких насыщенных цветов и задний план в
+                                мрачных
+                                приглушённых тонах.
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
 
+
                 <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-image-scale" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_1598.JPG" alt="">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
-                                    </a>
-                                </h4>
-                                <!-- Card info -->
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link">
-                                            <a href="#" class="stretched-link text-reset btn-link">
-                                                Авторы: Ахмедова Фарзона и Умаров Мирзокарим
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
+                    <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal5"
+                         style="border: none;">
+                        <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                            <img src="assets/images/works/IMG_1598.JPG" style="min-height: 100%;" alt="">
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link">
+                                                <a href="#ч" class="stretched-link text-reset btn-link">
+                                                    Авторы: Ахмедова Фарзона и Умаров Мирзокарим
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample5">
-                    <div class="card card-body">
-                        Ее образование – наше будущее.
-                        В странах Центральной Азии образование для девочек часто уходит на второй план. Родители считают, что главное в девушке это тихое воспитание, поддатливость, умение готовить и заниматься бытовыми делами. Живя в цетре города мы можем не замечать, как там, где-то в деревне, девочку одевают в темное полотно и не позволяют учиться в школе после 4 класса.
-                        На картине изображена девочка окруженная серым замкнутым кругом, который олицетворяет жизнь людей не имеющих доступа к образованию. Ангел-олицетворение ума, силы, и доброты. Серый круг начинает потихоньку таять, и девочке открывается целый космос. Космос знаний, новых возможностей, светлого будущего.
+                <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
+                                Мусор захватывает планету
+                                Если коротко, то наша картина раскрывает тему экологии. Эта проблема касается всего мира
+                                и мы - не исключение.
+                                Я читала, что каждый ДЕНЬ в свалку привозят несколько тонн мусора.
+                                Лишь малую часть перерабатывают, остальное сжигают или закапывают.
+                                И ещё, когда мы куда-то идём с семьёй отдыхать, у озер всегда очень много мусора,
+                                пластика, пакетов. Этим мы показали проблему безответственности людей к экологии.
+                                На картине изображён кит который задыхается от мусора. Мы хотели показать что
+                                безответственность людей имеет негативное влияние на все окружение.
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-image-scale" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_1599.JPG" alt="">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
 
-                                    </a>
-                                </h4>
-                                <!-- Card info -->
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link">
-                                            <a href="#" class="stretched-link text-reset btn-link">
-                                                Автор: Хаутова Ира
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                        <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal6"
+                             style="border: none;">
+                            <!-- Card Image -->
+                            <img src="assets/images/works/IMG_1599.JPG" style="min-height: 100%;" alt="">
+                            <!-- Card Image overlay -->
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link">
+                                                <a href="#" class="stretched-link text-reset btn-link">
+                                                    Автор: Хаутова Ира
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample6">
-                    <div class="card card-body">
-                        "Бухарский Олень" - картина нитью
-
-                        Графичное изображение краснокнижного животного нитью на черном фоне олицетворяет страшную проблему современности - вымирание без возможности возобновить популяцию.
-                        Черный глянцевый фон олицетворяет смерть.
-                        Красными нитями изображён едва понятный образ животного - Бухарского оленя. Красные нити олицетворяют красную книгу, кровь, сигнал бедствия и важность данной проблемы.
-                        Картину можно также отнести к теме проблемы  экологии.
-
+                <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
+                                "Бухарский Олень" - картина нитью
+                                Графичное изображение краснокнижного животного нитью на черном фоне олицетворяет
+                                страшную проблему современности - вымирание без возможности возобновить популяцию.
+                                Черный глянцевый фон олицетворяет смерть.
+                                Красными нитями изображён едва понятный образ животного - Бухарского оленя. Красные нити
+                                олицетворяют красную книгу, кровь, сигнал бедствия и важность данной проблемы.
+                                Картину можно также отнести к теме проблемы экологии.
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
 
+                <!--                baha-->
                 <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-image-scale" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_1600.JPG" alt="">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
-
-                                    </a>
-                                </h4>
-                                <!-- Card info -->
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link"><a href="#"
-                                                                 class="stretched-link text-reset btn-link">Автор: Негматов Бахтовар </a>
-                                        </div>
-                                    </li>
-                                </ul>
+                    <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                        <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal7"
+                             style="border: none;">
+                            <!-- Card Image -->
+                            <img src="assets/images/works/bahawork.png" style="min-height: 35rem;" alt="">
+                            <!-- Card Image overlay -->
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link"><a href="#"
+                                                                     class="stretched-link text-reset btn-link">Автор:
+                                                Негматов Бахтовар </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample7">
-                    <div class="card card-body">
-                        Неприкасаемость законом.
+                <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
+                                Неприкасаемость законом.
+                                Превышение полномочий , под маской закона творить беззаконие, неприкосаемость законом.
+                                Постер представляет из себя старую газетную бумагу, где статья показывает «двойные
+                                стандарты». С левой стороны нарисована рука представляющая «руку народа», а с другой
+                                человек из высшего чина, который надел маску закона и творит беззаконие и его маска
+                                давно уже вся в порче и заразе в виде разломов. Разломы, потому что маска уже не
+                                выдерживает его испачканное лицо и грязь его лица уже даже маска не скрывает и
+                                вырывается наружу грязь. Рука народа тянется к лицу чина с желанием сорвать эту маску.
+                                По сторонам есть статьи, одна статья про руку – Сегодня утром предводитель
+                                правозащитного движения «Рука Народа» был задержан и обвинен в измене государству …
+                                Другая про чина с маской – В ночь с 15 го до 16 числа в Рутритрском округе машиной были
+                                сбиты подростки в возрасте 17-18 лет, данные о злодеятеле скрываются властями но по
+                                некоторым данным нам известно что это ….
+                                Лицо в маске в стихах унижает и манит «руку народа» к себе, а «рука народа» в своем
+                                стихе говорит, что доберется до него и сорвет эту маску .
 
-                        Превышение полномочий , под маской закона творить беззаконие, неприкосаемость законом.
-                        Постер представляет из себя старую газетную бумагу, где статья показывает «двойные стандарты». С левой стороны нарисована рука представляющая «руку народа», а с другой человек из высшего чина, который надел маску закона и творит беззаконие и его маска давно уже вся в порче и заразе в виде разломов. Разломы, потому что маска уже не выдерживает его испачканное лицо и грязь его лица уже даже маска не скрывает и вырывается наружу грязь. Рука народа тянется к лицу чина с желанием сорвать эту маску. По сторонам есть статьи, одна статья про руку – Сегодня утром  предводитель правозащитного движения «Рука Народа» был задержан и обвинен  в измене государству …
-                        Другая про чина с маской  – В ночь с 15 го до 16 числа в Рутритрском округе машиной были сбиты подростки в возрасте 17-18 лет, данные о злодеятеле скрываются властями но по некоторым данным нам известно что это ….
-                        Лицо в маске в стихах унижает и манит «руку народа» к себе, а «рука народа» в своем стихе говорит, что доберется до него и сорвет эту маску .
-
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-image-scale" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#collapseExample8" aria-expanded="false" aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_1601.JPG" alt="">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
 
-                                    </a>
-                                </h4>
-                                <!-- Card info -->
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link"><a href="#"
-                                                                 class="stretched-link text-reset btn-link"> Автор: Буранова Мухаррам </a>
-                                        </div>
-                                    </li>
-                                </ul>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                        <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal8"
+                             style="border: none;">
+                            <!-- Card Image -->
+                            <img src="assets/images/works/IMG_1606.JPG" style="min-height: 100%;" alt="">
+                            <!-- Card Image overlay -->
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link"><a href="#"
+                                                                     class="stretched-link text-reset btn-link">Автор:
+                                                Джураев Абдулвафо</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample8">
-                    <div class="card card-body">
-                        Быть девушкой тяжело
-                        В нашем обществе есть чётко выраженные гендерные роли. И за эти рамки нельзя выходить, ибо ты подвергнешься общественному порицанию. Патриархальное общество приводит к дискриминации. В основе всего этого лежит убеждение, что женщины и мужчины не могут быть равными. Поэтому сексизм находит своё проявление в харассменте. Сексизм – это убеждение, харассмент – действие. Оно шире. Это действия, жесты, поступки по отношению к другому человеку.
-                        Женщин в семье подвергают жестокому обращению, однако отношение к этому властей, похоже, отражает отношение общества, когда считается, что женщина сама виновата в домашнем насилии. Власти видят свою миссию в том, чтобы выступать в роли посредника и сохранять семью, вместо того, чтобы защитить женщину и её права.
-
+                <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
+                                Заключённые руки
+                                Люди сами не понимая того ограничивают себя, не вдаваясь в подробности соглашаются с
+                                мнениями других людей (доверяют власть непонятным людям).
+                                Заключённые руки по своей воле отдают ключи от наручников, а рука другого человека хочет
+                                забрать этот ключ, и отличительная черта руки, которая забирает ключ состоит в том, что
+                                на ней видно, что человек одет в костюм, это символизирует, что он работник
+                                государственной структуры.
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-image-scale" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#collapseExample9" aria-expanded="false" aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_1605.JPG" alt="">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
 
-                                    </a>
-                                </h4>
-                                <!-- Card info -->
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link"><a href="#"
-                                                                 class="stretched-link text-reset btn-link">Автор: Ахмедова Фарзона</a>
-                                        </div>
-                                    </li>
-                                </ul>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                        <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal9"
+                             style="border: none;">
+                            <!-- Card Image -->
+                            <img src="assets/images/works/IMG_1607.JPG" style="min-height: 100%;" alt="">
+                            <!-- Card Image overlay -->
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link"><a href="#"
+                                                                     class="stretched-link text-reset btn-link"> Автор:
+                                                Джураев Абдулвафо</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample9">
-                    <div class="card card-body">
-                        Ее образование – наше будущее.
-                        В странах Центральной Азии образование для девочек часто уходит на второй план. Родители считают, что главное в девушке это тихое воспитание, поддатливость, умение готовить и заниматься бытовыми делами. Живя в цетре города мы можем не замечать, как там, где-то в деревне, девочку одевают в темное полотно и не позволяют учиться в школе после 4 класса.
-                        На картине изображена девочка окруженная серым замкнутым кругом, который олицетворяет жизнь людей не имеющих доступа к образованию. Ангел-олицетворение ума, силы, и доброты. Серый круг начинает потихоньку таять, и девочке открывается целый космос. Космос знаний, новых возможностей, светлого будущего.
-
+                <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
+                                Семейное фото
+                                На руках родителей надеты наручники, а руки детей свободны. Это отсылка к тому, что чем
+                                человек старше и чем у него больше осознания себя и окружающих вещей, чем больше у
+                                человека ценностей, тем легче его подчинить. А дети делают то что им хочется, а не то
+                                что им говорят.
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-image-scale" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#collapseExample10" aria-expanded="false" aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_1606.JPG" alt="">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
 
-                                    </a>
-                                </h4>
-                                <!-- Card info -->
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link"><a href="#"
-                                                                 class="stretched-link text-reset btn-link">Автор: Джураев Абдулвафо</a>
-                                        </div>
-                                    </li>
-                                </ul>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                        <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal10"
+                             style="border: none;">
+                            <!-- Card Image -->
+                            <img src="assets/images/works/IMG_1608.JPG" style="min-height: 100%;" alt="">
+                            <!-- Card Image overlay -->
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link"><a href="#"
+                                                                     class="stretched-link text-reset btn-link">Автор:
+                                                Анушервон Шойимардонов</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample10">
-                    <div class="card card-body">
-                        Заключённые руки
+                <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
 
-                        Люди сами не понимая того ограничивают себя, не вдаваясь в подробности соглашаются с мнениями других людей (доверяют власть непонятным людям).
-                        Заключённые руки по своей воле отдают ключи от наручников, а рука другого человека хочет забрать этот ключ, и отличительная черта руки, которая забирает ключ состоит в том, что на ней видно, что человек одет в костюм, это символизирует, что он работник государственной структуры.
+                                Проект ГОЛОС
+                                Данная работа посвящена ряду проблем:
+                                - Домашнее насилие ( психологическое, физическое и экономическое )
+                                - Не равенство и дискриминация
+                                - Участие женщин в общественной жизни общества
+                                - Голос женщин
 
+                                В Таджикистане, как и в других традиционных обществах, домашнее насилие основаны на
+                                гендерном неравенстве и стереотипах о роли женщины.
+                                По разным оценкам международных организаций и государственных органов в Таджикистане
+                                насилию подвергается от 50% до 80% женщин и детей.
+                                Заметим, что в традиционных и в современных обществах насилие проявляется по-разному.
+                                Источники насилия в традиционных обществах больше основаны на гендерном неравенстве и
+                                глубоко укоренившихся стереотипов о роли женщины и девочки.
+
+
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-image-scale" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#collapseExample11" aria-expanded="false" aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_1607.JPG" alt="">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
 
-                                    </a>
-                                </h4>
-                                <!-- Card info -->
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link"><a href="#"
-                                                                 class="stretched-link text-reset btn-link"> Автор: Джураев Абдулвафо</a>
-                                        </div>
-                                    </li>
-                                </ul>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                        <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal11"
+                             style="border: none;">
+                            <img src="assets/images/works/IMG_1610.JPG" style="min-height: 100%;" alt="">
+                            <!-- Card Image overlay -->
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link">
+                                                <a href="#" class="stretched-link text-reset btn-link">
+                                                    Автор: Малика Ачилова </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample11">
-                    <div class="card card-body">
-                        Семейное фото
-
-                        На руках родителей надеты наручники, а руки детей свободны. Это отсылка к тому, что чем человек старше и чем у него больше осознания себя и окружающих  вещей, чем больше у человека ценностей, тем легче его подчинить. А дети делают то что им хочется, а не то что им говорят.
-
+                <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
+                                "Это не оружие"
+                                Оружие не имеет никакого вреда, пока не попадает в руки человека. Опасным его делают
+                                мысли и намерения.
+                                Мысли определяют поступки: когда ты перед выбором, он может показаться легким, но всегда
+                                есть последствия, с которыми приходится жить.
+                                Каждый человек является творцом своей истории. Просто дайте себе время на раздумия,
+                                когда будете делать следующий шаг...
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-image-scale" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#collapseExample12" aria-expanded="false" aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_1608.JPG" alt="">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
 
-                                    </a>
-                                </h4>
-                                <!-- Card info -->
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link"><a href="#" class="stretched-link text-reset btn-link">Автор: Анушервон Шойимардонов</a>
-                                        </div>
-                                    </li>
-                                </ul>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                        <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal12"
+                             style="border: none;">
+                            <img src="assets/images/works/IMG_1601.JPG" style="min-height: 100%;" alt="">
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link">
+                                                <a href="#" class="stretched-link text-reset btn-link"> Автор:
+                                                    Буранова Мухаррам
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample12">
-                    <div class="card card-body">
-                        Проект ГОЛОС
-                        Данная работа посвящена ряду проблем:
-                        - Домашнее насилие ( психологическое, физическое и экономическое )
-                        - Не равенство и дискриминация
-                        - Участие женщин в общественной жизни общества
-                        - Голос женщин
+                <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
+                                Быть девушкой тяжело
+                                В нашем обществе есть чётко выраженные гендерные роли. И за эти рамки нельзя выходить,
+                                ибо ты подвергнешься общественному порицанию. Патриархальное общество приводит к
+                                дискриминации. В основе всего этого лежит убеждение, что женщины и мужчины не могут быть
+                                равными. Поэтому сексизм находит своё проявление в харассменте. Сексизм – это убеждение,
+                                харассмент – действие. Оно шире. Это действия, жесты, поступки по отношению к другому
+                                человеку.
+                                Женщин в семье подвергают жестокому обращению, однако отношение к этому властей, похоже,
+                                отражает отношение общества, когда считается, что женщина сама виновата в домашнем
+                                насилии. Власти видят свою миссию в том, чтобы выступать в роли посредника и сохранять
+                                семью, вместо того, чтобы защитить женщину и её права.
 
-                        В Таджикистане, как и в других традиционных обществах, домашнее насилие основаны на гендерном неравенстве и стереотипах о роли женщины.
-                        По разным оценкам международных организаций и государственных органов в Таджикистане насилию подвергается от 50% до 80% женщин и детей.
-                        Заметим, что в традиционных и в современных обществах насилие проявляется по-разному. Источники насилия в традиционных обществах больше основаны на гендерном неравенстве и глубоко укоренившихся стереотипов о роли женщины и девочки.
-
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card card-overlay-bottom card-image-scale" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#collapseExample13" aria-expanded="false" aria-controls="collapseExample">
-                        <!-- Card Image -->
-                        <img src="assets/images/works/IMG_1610.JPG" alt="">
-                        <!-- Card Image overlay -->
-                        <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
-                            <div class="w-100 mt-auto">
-                                <!-- Card title -->
-                                <h4 class="text-white">
-                                    <a href="#" class="btn-link text-reset stretched-link">
 
-                                    </a>
-                                </h4>
-                                <!-- Card info -->
-                                <ul class="nav nav-divider text-white-force align-items-center small">
-                                    <li class="nav-item position-relative">
-                                        <div class="nav-link"><a href="#"
-                                                                 class="stretched-link text-reset btn-link">Автор: Малика Ачилова </a>
-                                        </div>
-                                    </li>
-                                </ul>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card card-overlay-bottom card-img-scale overflow-hidden">
+                        <div type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal13"
+                             style="border: none;">
+                            <img src="assets/images/works/IMG_1605.JPG" style="min-height: 100%;" alt="">
+                            <div class="card-img-overlay d-flex flex-column p-3 p-md-4">
+                                <div class="w-100 mt-auto">
+                                    <ul class="nav nav-divider text-white-force align-items-center small">
+                                        <li class="nav-item position-relative">
+                                            <div class="nav-link"><a href="#"
+                                                                     class="stretched-link text-reset btn-link">Автор:
+                                                Ахмедова Фарзона</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="collapse col-12" id="collapseExample13">
-                    <div class="card card-body">
-                        "Это не оружие"
-                        Оружие не имеет никакого вреда, пока не попадает в руки человека. Опасным его делают мысли и намерения.
-                        Мысли определяют поступки: когда ты перед выбором, он может показаться легким, но всегда есть последствия, с которыми приходится жить.
-                        Каждый человек является творцом своей истории. Просто дайте себе время на раздумия, когда будете делать следующий шаг...
-
+                <div class="modal fade" id="exampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="modal-body">
+                                Ее образование – наше будущее.
+                                В странах Центральной Азии образование для девочек часто уходит на второй план. Родители
+                                считают, что главное в девушке это тихое воспитание, поддатливость, умение готовить и
+                                заниматься бытовыми делами. Живя в цетре города мы можем не замечать, как там, где-то в
+                                деревне, девочку одевают в темное полотно и не позволяют учиться в школе после 4 класса.
+                                На картине изображена девочка окруженная серым замкнутым кругом, который олицетворяет
+                                жизнь людей не имеющих доступа к образованию. Ангел-олицетворение ума, силы, и доброты.
+                                Серый круг начинает потихоньку таять, и девочке открывается целый космос. Космос знаний,
+                                новых возможностей, светлого будущего.
+                            </div>
+                            <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close
+                            </button>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -743,25 +878,21 @@
     <!--        </div>-->
     <!--    </section>-->
 
-    <section class="pb-0 pt-3 mt-1">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="bg-dark p-3 p-sm-4 rounded-3 position-relative overflow-hidden">
-                        <div class="row">
-                            <div class="col-md-8 col-lg-6 mx-auto text-center py-5 position-relative">
-                                <!-- Title -->
-                                <h2 class="display-6 text-white">Never miss a story!</h2>
-                                <p class="text-white">
-                                    Get the freshest headlines and updates sent uninterrupted to your inbox.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!--    <section class="pb-0 pt-3 mt-1">-->
+    <!--        <div class="container">-->
+    <!--            <div class="row">-->
+    <!--                <div class="col">-->
+    <!--                    <div class="bg-dark p-3 p-sm-4 rounded-3 position-relative overflow-hidden">-->
+    <!--                        <div class="row">-->
+
+    <!--                           -->
+
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
 
 
 </main>
@@ -805,5 +936,10 @@
 <script src="assets/js/functions.js"></script>
 
 </body>
+<style>
+    .modal-body {
+        font-size: 1.5rem;
+    }
 
+</style>
 </html>
