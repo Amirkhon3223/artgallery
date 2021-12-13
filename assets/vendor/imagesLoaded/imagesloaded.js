@@ -1,13 +1,5 @@
-/*!
- * imagesLoaded v4.1.4
- * JavaScript is all like "You images are done yet or what?"
- * MIT License
- */
 
 ( function( window, factory ) { 'use strict';
-  // universal module definition
-
-  /*global define: false, module: false, require: false */
 
   if ( typeof define == 'function' && define.amd ) {
     // AMD
@@ -32,8 +24,6 @@
 
 })( typeof window !== 'undefined' ? window : this,
 
-// --------------------------  factory -------------------------- //
-
 function factory( window, EvEmitter ) {
 
 'use strict';
@@ -41,9 +31,6 @@ function factory( window, EvEmitter ) {
 var $ = window.jQuery;
 var console = window.console;
 
-// -------------------------- helpers -------------------------- //
-
-// extend objects
 function extend( a, b ) {
   for ( var prop in b ) {
     a[ prop ] = b[ prop ];

@@ -1,31 +1,3 @@
-/**
-* Blogzine - Blog and Magazine Bootstrap 5 Theme
-*
-* @author Webestica (https://www.webestica.com/)
-* @version 1.0.2
-**/
-
-
-/* ===================
-Table Of Content
-======================
-01 PRELOADER
-02 MEGA MENU
-03 STICKY HEADER
-04 TINY SLIDER
-05 PARALLAX BACKGROUND
-06 STICKY BAR
-07 TOOLTIP
-08 POPOVER
-09 BACK TO TOP
-10 STICKY POST
-11 STICKY FOOTER
-12 GLIGHTBOX
-13 ISOTOPE
-14 DARK MODE
-15 FONT SIZE
-16 LAZY LOAD
-====================== */
 
 "use strict";
 !function () {
@@ -375,9 +347,7 @@ var e = {
           }); 
         }
     },
-    // END: Tiny Slider
 
-    // START: 05 Parallax Background
     parallaxBG: function () {
         var parBG = e.select('.bg-parallax');
         if (e.isVariableDefined(parBG)) {
@@ -386,38 +356,25 @@ var e = {
             });
         }
     },
-    // END: Parallax Background
-
-    // START: 06 Sticky Bar
     stickyBar: function () {
         var sb = e.select('[data-sticky]');
         if (e.isVariableDefined(sb)) {
             var sticky = new Sticky('[data-sticky]');
         }
     },
-    // END: Sticky Bar
-
-    // START: 07 Tooltip
-    // Enable tooltips everywhere via data-toggle attribute
     toolTipFunc: function () {
         var tooltipTriggerList = [].slice.call(e.selectAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
           return new bootstrap.Tooltip(tooltipTriggerEl)
         })
     },
-    // END: Tooltip
-
-    // START: 08 Popover
-    // Enable popover everywhere via data-toggle attribute
     popOverFunc: function () {
         var popoverTriggerList = [].slice.call(e.selectAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
           return new bootstrap.Popover(popoverTriggerEl)
         })
     },
-    // END: Popover
 
-    // START: 09 Back to Top
     backTotop: function () {
         var scrollpos = window.scrollY;
         var backBtn = e.select('.back-top');
@@ -498,7 +455,6 @@ var e = {
         var isGridItem = e.select('.grid-item');
         if (e.isVariableDefined(isGridItem)) {
 
-            // Code only for normal Grid
             var onlyGrid = e.select('[data-isotope]');
             if (e.isVariableDefined(onlyGrid)) {
                 var allGrid = e.selectAll("[data-isotope]");
@@ -516,7 +472,6 @@ var e = {
                     });
                 });
             }
-
             // Code only for normal Grid
             var onlyGridFilter = e.select('.grid-menu');
             if (e.isVariableDefined(onlyGridFilter)) {
@@ -532,7 +487,6 @@ var e = {
                         transitionDuration: '0.7s',
                         layoutMode: filterContainerItemDataObj.layoutMode
                     });
-
                     var menuItems = menu.querySelectorAll('li a');
                     menuItems.forEach(menuItem => {
                         menuItem.addEventListener('click', function (event) {
@@ -542,20 +496,17 @@ var e = {
                             menuItem.addClass('active');
                         });
                     });
-
                     imagesLoaded(filterContainer).on('progress', function () {
                         filter.layout();
                     });
                 });
             }
-
         }
     },
     // END: Isotope
 
     // START: 14 Dark mode
     darkMode: function () {
-
         var dark = e.select('#darkModeSwitch');
         if (e.isVariableDefined(dark)) {
           let theme = localStorage.getItem('data-theme');
@@ -564,33 +515,20 @@ var e = {
 
           var changeThemeToDark = () => {
             document.documentElement.setAttribute("data-theme", "dark") // set theme to dark
-            if(dir == 'rtl') {
-                style.setAttribute('href', 'assets/css/style-dark-rtl.css');
-            } else {
-                style.setAttribute('href', 'assets/css/style-dark.css');
-            }
+            style.setAttribute('href', 'assets/css/style-dark.css');
             localStorage.setItem("data-theme", "dark") // save theme to local storage
           }
-
           var changeThemeToLight = () => {
             document.documentElement.setAttribute("data-theme", "light") // set theme light
-            if(dir == 'rtl') {
-                style.setAttribute('href', 'assets/css/style-rtl.css');
-            } else {
-                style.setAttribute('href', 'assets/css/style.css');
-            }
-            
+            style.setAttribute('href', 'assets/css/style.css');
             localStorage.setItem("data-theme", 'light') // save theme to local storage
           }
-
           if(theme === 'dark'){
             changeThemeToDark()
           } else if (theme == null || theme === 'light' ) {
             changeThemeToLight();
           }
-
           const dms = document.querySelector('#darkModeSwitch');
-
           dms.addEventListener('click', () => {
             let theme = localStorage.getItem('data-theme'); // Retrieve saved them from local storage
             if (theme ==='dark'){
@@ -601,15 +539,11 @@ var e = {
           });
         }
     },
-    // END: Dark mode
 
-    // START: 15 Font size
+
     zooming: function () {
       const doc = document.documentElement;
       var radios = document.querySelectorAll('input[type=radio][name="fntradio"]');
-
-      //localStorage.setItem('fntradio');
-    
       radios.forEach(radio => {
         radio.addEventListener("change", function() {
             var idZ = radio.getAttribute('id');
@@ -625,9 +559,6 @@ var e = {
         });
       });
     },
-    // END: Font size
-
-    // START: 16 Lazy Load
     lazyLoading: function () {
         var lazLoad = e.select('.lazy');
         if (e.isVariableDefined(lazLoad)) {
@@ -636,6 +567,6 @@ var e = {
             });
         }
     }
-    // END: Lazy Load
+
 };
 e.init();
