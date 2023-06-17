@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>Digital Gallery</title>
+    <meta name="description" content="Digital Gallery TUT Public Space">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/templatemo-misc.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" type="text/css" href="css/gallery.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+</head>
+<body>
+
+<script>
+    var myModal = document.getElementById('myModal')
+    var myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+    })
+
+    var myModalEl = document.getElementById('myModal')
+    myModalEl.addEventListener('hidden.bs.modal', function (event) {
+    })
+</script>
+
+<section id="pageloader">
+    <div class="loader-item fa fa-spin colored-border"></div>
+</section>
+
+<header class="site-header container-fluid">
+    <div class="main-header">
+        <div class="row">
+           <div>
+               <div class="logo col-lg-3 col-md-4 col-sm-8 col-xs-10 hidden-md mt-lg-3">
+                   <h1 style="font-size: 1.8rem;">
+                       <a href="index.html" style="color: #F69730FF">
+                           Digital Gallery
+                       </a>
+                   </h1>
+               </div>
+               <div class="menu-wrapper col-lg-9 col-md-8 col-sm-2 col-xs-4 my-sm-auto">
+                   <a href="#" class="toggle-menu visible-sm visible-xs mt-md-2" style="margin-top: -40px">
+                       <i class="fa fa-bars"></i>
+                   </a>
+                   <ul class="sf-menu hidden-xs hidden-sm">
+                       <li><a href="index.html">Главная</a></li>
+                       <li><a href="experts.html">Специалисты</a></li>
+                       <li class="active"><a href="gallery.html">Галлерея</a></li>
+                       <li><a href="our-team.html">Our Team</a></li>
+                       <li><a href="https://www.facebook.com/tut.coworking/" class="fa fa-facebook"></a></li>
+                       <li><a href="https://instagram.com/tut.coworking/" class="fa fa-instagram"></a></li>
+                   </ul>
+               </div>
+           </div>
+        </div>
+    </div>
+    <div id="responsive-menu">
+        <ul>
+            <li class="active"><a href="index.html">Главная</a></li>
+            <li><a href="experts.html">Специалисты</a></li>
+            <li><a href="gallery.html">Галлерея</a></li>
+            <li><a href="our-team.html">Our Team</a></li>
+            <li>
+                <a href="https://www.facebook.com/tut.coworking/" class="fa fa-facebook  me-2"></a>
+                <a href="https://instagram.com/tut.coworking/" class="fa fa-instagram  me-2"></a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+    <h2 class="m-5 text-center text-black">Арт работы</h2>
+
+    <div class="image-container">
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div class="card h-100 text-white">
+                    <img src="images/works/imgvali.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Турсунов Валиджон
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/imgvali.jpg" alt="">
+                            <h5 class="mt-2">Турсунов Валиджон</h5>
+                            <b>Люди ждут подходящего момента</b>
+                            Человек перед другими, надевая маску справедливости, отказывается совершить
+                            коррупцию,
+                            но если он находится один в помещении и никто не видит его, он с
+                            удовольствием
+                            совершает
+                            это грязное дело.
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                <div class="card h-100 text-white">
+                    <img src="images/works/imgshabrez.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Шукруллоева Шабрез
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal2" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/imgshabrez.jpg" alt="">
+                            <h5> Шукруллоева Шабрез</h5>
+                            <b>Домашнее наслие</b>
+                            Если смотреть на статус Кво, то одной из серьезных проблем общества является
+                            домашнее
+                            насилие и оно в Центральной Азии особо распространена.
+                            Женщина, которая подвергалась домашнему насилию, перед обществом всегда
+                            наносит
+                            гримас,как буд то у нее все хорошо. Но, несмотря на это она надеется и верит
+                            в
+                            яркое и
+                            светлое будущее (свет в глазах и солнце). Дети тоже становятся свидетелями и
+                            жертвами
+                            происходящего в семье, поэтому во сне видет разных героев из мультфильмов.
+                            Для
+                            ребенка
+                            же это целое детство. Цепь и птички описывают зависимость и свободу, в
+                            данном
+                            случаи
+                            речь идёт о жертве насилия.
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                <div class="card h-100 text-white">
+                    <img src="images/works/bars.png" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Тимур Шарипов
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal3" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/bars.png" alt="">
+                            <h5 class="mt-2">Тимур Шарипов</h5>
+                            <b>Браконьерство в центральной Азии</b> и массовое истребление редких
+                            животных
+                            является
+                            большой проблемой по сей день. Легальная международная торговля животными в
+                            год
+                            составляет более 317 000 живых птиц, более 2 млн. рептилий, 2,5 млн.
+                            крокодильих
+                            шкур,
+                            1,5 млн. шкур ящериц, 2,1 млн. шкур змей, 73 тонны икры, около 20 000
+                            охотничьих
+                            трофеев. Нелегальная торговля - по данным Интерпола, 6-9 миллиардов
+                            долларов в год. Это угрожает 30 тысячам видов животных по всему миру. Всего
+                            осталось
+                            около 6000 особей снежныйх барсов на всей планете. Человечество наступает,
+                            уничтожает
+                            этих животных. Их используют для украшений и трофея. Но никто не понимает,
+                            насколько это
+                            грозит человечеству. А жестокости человека нет предела, поэтому хочется
+                            призвать
+                            всех -
+                            остановить эту бесконечную цепь насилия и истребления над живыми существами
+                            🥺❤️
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                <div class="card h-100 text-white">
+                    <img src="images/works/timurhomes.png" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Тимур Шарипов
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal4" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/timurhomes.png" alt="">
+                            <h5 class="mt-2">Тимур Шарипов</h5>
+                            <b> «Островок жизни»</b>
+                            Народ в виде маленького городка окружён тёмными мрачными высотками. Городок
+                            светится,
+                            там люди
+                            живут, дома старенькие, много зелени, дети играют, кто-то вешает бельё. Этим
+                            хочется
+                            показать
+                            то, что люди – это часть государства, а не высотки. Что вот этот маленький
+                            островок
+                            и
+                            есть тот
+                            самый центральный объект, ради чего государство должно существовать. Этот
+                            островок и
+                            есть
+                            решения – которые ДОЛЖНЫ приниматься, а не идти из тёмных мрачных высоток.
+                            Цвета вокруг мрачные, пасмурные, тёмно-синие. А городок светлый, тёплый и
+                            светящийся. На
+                            вкус
+                            этот островок как тёплые венские вафли с клубничной начинкой, политый
+                            сгущённым
+                            молоком.
+                            А мрак
+                            вокруг городка, как горькие орехи (не люблю орехи). Которые покрылись
+                            изнутри
+                            гнилью,
+                            где сидит
+                            огромная гусеница пожирая всё. Хотя снаружи кажутся крепкими и прочными…
+                            Пахнет
+                            городок
+                            очень
+                            приятно, как свежее лавандовое мыло. Таким мылом и кондиционером люди
+                            стирают
+                            бельё,
+                            которое
+                            висит на балконах и улицах людей. Всё душистое свежее чистое и такое
+                            искреннее.
+                            Очень
+                            кажется
+                            родным и домашним. Этот островок звучит как спокойная indie или country
+                            музыка.
+                            Потому
+                            что
+                            никуда не спешит и не торопится. А мрачные высотки словно наблюдают за ним,
+                            и
+                            ощущение
+                            будто они
+                            медленно перемещаются. Звучит как ледокол, от которого исходит глухой звук
+                            «Гууум» и
+                            шарахается
+                            ударяясь металлическим корпусом. Так и эти здания скользят по земле.
+                            Направление:
+                            антиутопия,
+                            художественный цифровой стиль маслянной краски. Нарисована иллюстрация на
+                            перьевом
+                            дисплее в
+                            цифровом формате. Структура: передний план ярких насыщенных цветов и задний
+                            план
+                            в
+                            мрачных
+                            приглушённых тонах.
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                <div class="card h-100 text-white">
+                    <img src="images/works/faramir.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Авторы: Фарзона и Мирзокарим
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal5" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/faramir.jpg" alt="">
+                            <h5 class="mt-2">Ахмедова Фарзона и Умаров Мирзокарим</h5>
+                            Мусор захватывает планету
+                            Если коротко, то наша картина раскрывает тему экологии. Эта проблема
+                            касается
+                            всего
+                            мира
+                            и мы - не исключение.
+                            Я читала, что каждый ДЕНЬ в свалку привозят несколько тонн мусора.
+                            Лишь малую часть перерабатывают, остальное сжигают или закапывают.
+                            И ещё, когда мы куда-то идём с семьёй отдыхать, у озер всегда очень много
+                            мусора,
+                            пластика, пакетов. Этим мы показали проблему безответственности людей к
+                            экологии.
+                            На картине изображён кит который задыхается от мусора. Мы хотели показать
+                            что
+                            безответственность людей имеет негативное влияние на все окружение.
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                <div class="card h-100 text-white">
+                    <img src="images/works/iraimage.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Хаутова Ира
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal6" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/iraimage.jpg" alt="">
+                            <h5>Хаутова Ира</h5>
+                            "Бухарский Олень" - картина нитью
+                            Графичное изображение краснокнижного животного нитью на черном фоне
+                            олицетворяет
+                            страшную проблему современности - вымирание без возможности возобновить
+                            популяцию.
+                            Черный глянцевый фон олицетворяет смерть.
+                            Красными нитями изображён едва понятный образ животного - Бухарского оленя.
+                            Красные нити
+                            олицетворяют красную книгу, кровь, сигнал бедствия и важность данной
+                            проблемы.
+                            Картину можно также отнести к теме проблемы экологии.
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal7">
+                <div class="card h-100 text-white">
+                    <img src="images/works/bahawork.png" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <div class="text-white author">
+                                <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                    <i class="fas w-100 me-2 small fw-bolder"></i>
+                                    Автор: Негматов Бахтовар
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal7" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/bahawork.png" alt="">
+                            <h5>Негматов Бахтовар</h5>
+                            Неприкасаемость законом.
+                            Превышение полномочий , под маской закона творить беззаконие,
+                            неприкосаемость
+                            законом.
+                            Постер представляет из себя старую газетную бумагу, где статья показывает
+                            «двойные
+                            стандарты». С левой стороны нарисована рука представляющая «руку народа», а
+                            с
+                            другой
+                            человек из высшего чина, который надел маску закона и творит беззаконие и
+                            его
+                            маска
+                            давно уже вся в порче и заразе в виде разломов. Разломы, потому что маска
+                            уже не
+                            выдерживает его испачканное лицо и грязь его лица уже даже маска не скрывает
+                            и
+                            вырывается наружу грязь. Рука народа тянется к лицу чина с желанием сорвать
+                            эту
+                            маску.
+                            По сторонам есть статьи, одна статья про руку – Сегодня утром предводитель
+                            правозащитного движения «Рука Народа» был задержан и обвинен в измене
+                            государству …
+                            Другая про чина с маской – В ночь с 15 го до 16 числа в Рутритрском округе
+                            машиной были
+                            сбиты подростки в возрасте 17-18 лет, данные о злодеятеле скрываются
+                            властями но
+                            по
+                            некоторым данным нам известно что это ….
+                            Лицо в маске в стихах унижает и манит «руку народа» к себе, а «рука народа»
+                            в
+                            своем
+                            стихе говорит, что доберется до него и сорвет эту маску .
+
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal8">
+                <div class="card h-100 text-white">
+                    <img src="images/works/abduvafo.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Джураев Абдулвафо
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal8" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/abduvafo.jpg" alt="">
+                            <h5>Джураев Абдулвафо</h5>
+                            Заключённые руки
+                            Люди сами не понимая того ограничивают себя, не вдаваясь в подробности
+                            соглашаются с
+                            мнениями других людей (доверяют власть непонятным людям).
+                            Заключённые руки по своей воле отдают ключи от наручников, а рука другого
+                            человека хочет
+                            забрать этот ключ, и отличительная черта руки, которая забирает ключ состоит
+                            в
+                            том, что
+                            на ней видно, что человек одет в костюм, это символизирует, что он работник
+                            государственной структуры.
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal9">
+                <div class="card h-100 text-white">
+                    <img src="images/works/abduvafos.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Джураев Абдулвафо
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal9" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/abduvafos.jpg" alt="">
+                            <h5>Джураев Абдулвафо</h5>
+                            Семейное фото
+                            На руках родителей надеты наручники, а руки детей свободны. Это отсылка к
+                            тому,
+                            что чем
+                            человек старше и чем у него больше осознания себя и окружающих вещей, чем
+                            больше
+                            у
+                            человека ценностей, тем легче его подчинить. А дети делают то что им
+                            хочется, а
+                            не то
+                            что им говорят.
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal13">
+                <div class="card h-100 text-white">
+                    <img src="images/works/farz.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Ахмедова Фарзона
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal13" tabindex="-1"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/farz.jpg" alt="">
+                            <h5>Ахмедова Фарзона</h5>
+                            Ее образование – наше будущее.
+                            В странах Центральной Азии образование для девочек часто уходит на второй
+                            план.
+                            Родители
+                            считают, что главное в девушке это тихое воспитание, поддатливость, умение
+                            готовить и
+                            заниматься бытовыми делами. Живя в цетре города мы можем не замечать, как
+                            там,
+                            где-то в
+                            деревне, девочку одевают в темное полотно и не позволяют учиться в школе
+                            после 4
+                            класса.
+                            На картине изображена девочка окруженная серым замкнутым кругом, который
+                            олицетворяет
+                            жизнь людей не имеющих доступа к образованию. Ангел-олицетворение ума, силы,
+                            и
+                            доброты.
+                            Серый круг начинает потихоньку таять, и девочке открывается целый космос.
+                            Космос
+                            знаний,
+                            новых возможностей, светлого будущего.
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal11">
+                <div class="card h-100 text-white">
+                    <img src="images/works/malika.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Малика Ачилова
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal11" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/malika.jpg" alt="">
+                            <h5>Малика Ачилова</h5>
+                            "Это не оружие"
+                            Оружие не имеет никакого вреда, пока не попадает в руки человека. Опасным
+                            его
+                            делают
+                            мысли и намерения.
+                            Мысли определяют поступки: когда ты перед выбором, он может показаться
+                            легким,
+                            но всегда
+                            есть последствия, с которыми приходится жить.
+                            Каждый человек является творцом своей истории. Просто дайте себе время на
+                            раздумия,
+                            когда будете делать следующий шаг...
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal12">
+                <div class="card h-100 text-white">
+                    <img src="images/works/mukharram.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Буранова Мухаррам
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal12" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/mukharram.jpg" alt="">
+                            <h5>Буранова Мухаррам</h5>
+                            Быть девушкой тяжело
+                            В нашем обществе есть чётко выраженные гендерные роли. И за эти рамки нельзя
+                            выходить,
+                            ибо ты подвергнешься общественному порицанию. Патриархальное общество
+                            приводит к
+                            дискриминации. В основе всего этого лежит убеждение, что женщины и мужчины
+                            не
+                            могут быть
+                            равными. Поэтому сексизм находит своё проявление в харассменте. Сексизм –
+                            это
+                            убеждение,
+                            харассмент – действие. Оно шире. Это действия, жесты, поступки по отношению
+                            к
+                            другому
+                            человеку.
+                            Женщин в семье подвергают жестокому обращению, однако отношение к этому
+                            властей,
+                            похоже,
+                            отражает отношение общества, когда считается, что женщина сама виновата в
+                            домашнем
+                            насилии. Власти видят свою миссию в том, чтобы выступать в роли посредника и
+                            сохранять
+                            семью, вместо того, чтобы защитить женщину и её права.
+
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal10">
+                <div class="card h-100 text-white">
+                    <img src="images/works/anush.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Анушервон Шойимардонов
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal10" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/anush.jpg" alt="">
+                            <h5>Анушервон Шойимардонов</h5>
+                            Проект ГОЛОС
+                            Данная работа посвящена ряду проблем:
+                            - Домашнее насилие ( психологическое, физическое и экономическое )
+                            - Не равенство и дискриминация
+                            - Участие женщин в общественной жизни общества
+                            - Голос женщин
+
+                            В Таджикистане, как и в других традиционных обществах, домашнее насилие
+                            основаны
+                            на
+                            гендерном неравенстве и стереотипах о роли женщины.
+                            По разным оценкам международных организаций и государственных органов в
+                            Таджикистане
+                            насилию подвергается от 50% до 80% женщин и детей.
+                            Заметим, что в традиционных и в современных обществах насилие проявляется
+                            по-разному.
+                            Источники насилия в традиционных обществах больше основаны на гендерном
+                            неравенстве и
+                            глубоко укоренившихся стереотипов о роли женщины и девочки.
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal17">
+                <div class="card h-100 text-white">
+                    <img src="images/works/bahaw.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Бахтовар Негматов
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal17" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/bahaw.jpg" alt="">
+                            <h5>Бахтовар Негматов</h5>
+                            <b>Мальчик живший с отцом</b>
+                            Мальчик живший с отцом по среди волшебного леса очень любил животных,
+                            что нельзя сказать о его отце. Папа мальчика был охотником который ловил
+                            этих
+                            животных и
+                            убивал ради украшений и трофеев с их тел. Все трофеи с убитых животных были
+                            невероятно
+                            прекрасны
+                            по своей природе но ещё прекрасней было их видеть на живых зверях . Однажды
+                            мальчику
+                            сидя
+                            у камина стало интересно взять в руки оленьи рога которые его папа повесил
+                            над
+                            комином ,
+                            он взял их в руки и вдруг на улице услышал волшебный топот и звуки . Мальчик
+                            резко
+                            выбежал
+                            на улицу и увидел призрачного оленя который скакал плясал играл на снегу
+                            весело
+                            кружил
+                            вокруг
+                            мальчика , мальчик понял что рога что он держал в руках принадлежат этому
+                            прекрасному
+                            оленю ,
+                            со словами "Это принадлежит тебе, прости моего папу" мальчик вернул рога
+                            оленю ,
+                            после чего олень рассыпался в тысячи маленьких огоньков которые
+                            ещё долго тлели в воздухе , а мальчик со слезами в глазах зашёл домой .
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div type="button" class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal14">
+                <div class="card h-100 text-white">
+                    <img src="images/works/egor.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Егор Попов
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal14" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/egor.jpg" alt="">
+                            <h5>Егор Попов</h5>
+                            Все вымерло и сохранилась в красной книге
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal0000">
+                <div class="card h-100 text-white">
+                    <img src="images/works/popov.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Егор Попов
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal15">
+                <div class="card h-100 text-white">
+                    <img src="images/works/rukiya.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Мирхалимзода Рукия
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade width bg-blur" id="exampleModal15" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close p-3" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        <div class="modal-body">
+                            <img src="images/works/rukiya.jpg" alt="">
+                            <h5>Мирхалимзода Рукия</h5>
+                            <b>Третья дочь в семье</b>
+                            В семье рождается дочка, и не всегда она желанна, особенно если это уже
+                            вторая
+                            или
+                            третяя девочка. Мужчина хочет сына, из-за чего иногда дело от скандалов и
+                            криков
+                            доходит
+                            до развода.
+                            И как вы видите, это именно тот момент, когда мужчина отворачивается от
+                            своей
+                            семьи,
+                            хоть они ни в чем не виноваты.
+                            В этих случаях мужчина ничего не слышит или не видит, вот почему на картине
+                            у
+                            него
+                            отсутствуют глаза и уши. Но он может говорить, кричать и показывать свою
+                            злость.
+                            А женщина и бедные дочки в таком безысходном состоянии ничего не могут
+                            сказать
+                            или
+                            изменить.
+                            Тут затрагивается множество социальных проблем: гендерное неравенство,
+                            дискриминация и
+                            домашнее насилие.
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25"
+                                data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="h-100" data-bs-toggle="modal" data-bs-target="#exampleModal16">
+                <div class="card h-100 text-white">
+                    <img src="images/works/rukiya2.jpg" alt="">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="w-100 mt-auto card author">
+                            <a class="badge bg-black text-start p-2 mb-2 stretched-link btn-link" href="">
+                                <i class="fas w-100 me-2 small fw-bolder"></i>
+                                Автор: Мирхалимзода Рукия
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal width" id="exampleModal16" tabindex="-1"
+                 aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog width bg-blur modal-dialog-scrollable">
+                    <div class="modal-content width bg-opacity-75">
+                        <div class="modal-body bg-opacity-75 bg-blur width p-5">
+                            <img src="images/works/rukiya2.jpg" alt="">
+                            <h5>Мирхалимзода Рукия</h5>
+                            <b>786-ая капля</b>
+                            786ая капля. Именно так и называется эта картина.
+                            Потому что на картине запечатлен ангел, который подсчитывает уже 786ую каплю
+                            слёз
+                            девочки.
+                            Это девочка Малала Юсуфзай, родом из Пакистана.
+                            В 2009ом году талибы взяли власть над Пакистаном и запретили женщинам и
+                            девочкам
+                            права
+                            на образование.
+                            Но Малала не могла смириться с этим и не смотря на все угрозы талибов
+                            продолжала
+                            ходить
+                            в школу.
+                            Однажды в автобусе, когда она возвращалась со школы, талибы выстрелили в
+                            неё. Но
+                            с
+                            Божьей волей, после долгой комы она выживает.
+                            Малала даже после этого инцидента не отказалась от образования, и сейчас
+                            является послом
+                            ООН и примером для многих мусульманских девочек.
+                            В правом нижнем углу картины стоит её знаменитая цитата:
+                            "День Малалы не только мой день. Это день всех девочек и парней которые
+                            восстали
+                            за свои
+                            права"
+                        </div>
+                        <button type="button" class="btn btn-secondary m-2 w-25" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--    Video-->
+    <section class="p-0">
+        <div class="container art-works">
+            <div class="row">
+                <div class="mt-5 fw-bold text-center">
+                    <h1 style="font-size: 2rem; font-weight: bolder; margin-top: 5rem">
+                        Видео и подкасты об Арт активизме
+                    </h1>
+                </div>
+                <div class="mt-5 col-sm-6 col-lg-4">
+                    <div class="card card-img-scale card-overlay-top ">
+                        <iframe src="https://drive.google.com/file/d/1WMChS-0CQoLcwl2luZmwC77s8zdvijwY/preview"
+                                width="100%" height="300px" allow="autoplay">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="mt-5 col-sm-6 col-lg-4">
+                    <div class="card card-img-scale card-overlay-top ">
+                        <iframe src="https://drive.google.com/file/d/11isbE-6OcxeesWXKy9udZzJSswot7BTP/preview"
+                                width="100%" height="300px" allow="autoplay">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Video -->
+
+    <!--    Podcasts -->
+    <section class="pb-0  mt-1">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="bg-dark p-3 p-sm-4 rounded-3 position-relative overflow-hidden">
+                        <div class="row pt-5">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <iframe src="https://anchor.fm/perekrestki/embed/episodes/ep-e180bgm/a-a6jo9tp"
+                                        class="" width="100%" frameborder="0" scrolling="no"></iframe>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <iframe src="https://anchor.fm/perekrestki/embed/episodes/ep-e180bm5/a-a6joagl"
+                                        class="" width="100%" frameborder="0" scrolling="no"></iframe>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <iframe src="https://anchor.fm/perekrestki/embed/episodes/ep-e180pla/a-a6jpscm"
+                                        class="" width="100%" frameborder="0" scrolling="no"></iframe>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 my-auto align-items-center"
+                                 style="color: #000">
+                                Автор: <b>Джоми Тоирзода</b> <br>
+                                Гости: <b>Яниса Саар</b> и <b>Мирзокарим Умаров</b>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Podcasts -->
+
+
+</div>
+
+<script src="js/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/vendor/jquery-1.11.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+
+<!-- Preloader -->
+<script type="text/javascript">
+    //<![CDATA[
+    $(window).load(function () { // makes sure the whole site is loaded
+        $('.loader-item').fadeOut(); // will first fade out the loading animation
+        $('#pageloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        $('body').delay(350).css({'overflow-y': 'visible'});
+    })
+    //]]>
+</script>
+
+</body>
+<style>
+
+</style>
+</html>

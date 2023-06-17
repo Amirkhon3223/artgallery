@@ -1,0 +1,95 @@
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    grid-gap: 4rem;
+    cursor: pointer;
+}
+
+.image-container .image {
+    position: relative;
+    padding-bottom: 8%;
+    cursor: pointer;
+}
+
+.text-image {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 1rem;
+    color: white;
+    font-size: .5rem;
+    cursor: pointer;
+}
+
+.image-container .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border: 1.5px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card, .card-img-overlay:hover .author{
+    color: #fff;
+    cursor: pointer;
+}
+.card .author{
+    color: #fff;
+    background: none;
+    font-size: 1.1rem;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card .author .btn-link{
+    top: 90%;
+    position: relative;
+    cursor: pointer;
+}
+
+.card .author:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.author a{
+    color: #fff;
+    cursor: pointer;
+}
+.author a:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.h-100:hover{
+    cursor: pointer;
+}
+
+.modal-body{
+    color: #fff;
+}
+.modal .modal-body h1, h2, h3, h4, h5, h6{
+    color: #fff !important;
+}
+
+@media (max-width: 920px){
+    .image-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+        grid-gap: 1rem;
+    }
+}
+
+@media (max-width: 720px){
+    .image-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        width: 100%;
+        grid-gap: 1rem;
+    }
+}
+
